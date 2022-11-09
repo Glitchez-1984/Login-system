@@ -8,14 +8,14 @@ app = Flask(__name__)
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="D24$m?!tdy",
-    database="pythonclub"
+    password="abc123",
+    database="sample"
 )
 
 
 def check_cred(uname, pword):
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM login_info;")
+    cursor.execute("SELECT * FROM sample_table;")
     if (uname, pword) in cursor:
         print('credentials approved login successful')
         return 'sucess'
