@@ -5,4 +5,4 @@ CREATE TABLE sample_table (
     Password varchar(255)
 );
 INSERT INTO sample_table(Username, Password)
-VALUES ('bob', 'abc123');
+VALUES ('Frank', '362029');
