@@ -26,7 +26,7 @@ def check_cred(uname, pword):
 @app.route('/')
 def index():
     return render_template('index.html')
-
+#renders from templates folder
 
 @app.route('/processUserInfo/<string:userInfo>', methods=['POST'])
 def processUserInfo(userInfo):
