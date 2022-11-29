@@ -21,7 +21,7 @@ def check_cred(uname, pword):
         return 'sucess'
     else:
         return 'error'
-
+#str because booleans cant be processed by JSON and ajax to be posted
 
 @app.route('/')
 def index():
