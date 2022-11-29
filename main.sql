@@ -1,4 +1,5 @@
 -- Change the database, table, and column names to whatever suits your task and add or remove any values you want
+-- Since this creates a new database each time, make sure to run it oncd
 CREATE DATABASE sample;
 CREATE TABLE sample_table (
     Username varchar(255),
