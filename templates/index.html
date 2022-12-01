@@ -22,7 +22,9 @@
 			'name' : name.value,
 			'pass' : pword.value
 		}
+		//opens new XMLHttpRequest to connect with a flask transfer Ajax packet
 		const request = new XMLHttpRequest();
+		//posts using stringify to the port setup in flask file
 		request.open('POST', `/processUserInfo/${JSON.stringify(userInfo)}`);
 		request.onload = function(){
 			const flaskMessage = request.responseText
