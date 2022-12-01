@@ -5,7 +5,7 @@ import mysql.connector
 
 app = Flask(__name__)
 
-db = mysql.connector.connect(
+login_db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="abc123",
@@ -14,7 +14,7 @@ db = mysql.connector.connect(
 
 
 def check_cred(uname, pword):
-    cursor = db.cursor()
+    cursor = login_db.cursor()
     cursor.execute("SELECT * FROM sample_table;")
     if (uname, pword) in cursor:
         print('credentials approved login successful')
@@ -37,3 +37,4 @@ def processUserInfo(userInfo):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=81)
+#change port in regards to whatever is most accessible on your router
